@@ -1,0 +1,19 @@
+<div class="photo-row" ng-repeat="photo in photos.items">
+  <div class="photo-column" style="background: url({{photo.media.m}})"
+    ng-click="viewOnFlickr(photo)">
+  </div>
+  <div class="data-column">
+    <h3>
+     {{photo.title | characters:45}}
+    </h3>
+    <div class="data">
+      <div class="date">Published: {{photo.published | potatoDate}}</div>
+      <a class="author"
+        ng-href="http://www.flickr.com/people/{{photo.author_id}}/">
+        Photo author</a> 
+      <a class="view-on-flickr" ng-href="{{photo.link}}">
+        View on Flickr
+      </a>
+    </div>
+  </div>
+</div>

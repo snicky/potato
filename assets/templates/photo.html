@@ -1,0 +1,30 @@
+<div class="single-photo">
+  <div class="photo-header">
+    <div class="photo-title">
+      <h1><a ng-href="{{photoURL}}">{{photoTitle | characters: 75}}</a></h1>
+      <p class="data">
+        <a ng-href="http://www.flickr.com/people/{{photo.owner.nsid}}">
+          Photo author</a> | 
+        Published: {{photo.dates.posted | potatoDate}}
+      </p>
+    </div>
+    <div class="back-button">
+      <a href="#" class="btn btn-primary">Back</a>
+    </div>
+  </div>
+  <div class="clearfix">
+    <div class="photo">
+      <a ng-href="{{photoURL}}">
+        <img ng-src="{{photoSRC}}" style="max-width: 100%">
+      </a>
+    </div>
+    <div class="desc-and-tags">
+      <div class="desc" ng-show="photoDesc" ng-bind-html="photoDesc"></div>
+      Tags:
+      <a href="http://www.flickr.com/photos/tags/{{tag.raw}}" class="tag"
+        ng-repeat="tag in photoTags">
+        {{tag.raw}}
+      </a>
+    </div>
+  </div>
+</div>

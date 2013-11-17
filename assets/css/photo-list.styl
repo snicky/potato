@@ -1,0 +1,99 @@
+
+body
+  margin-top    M
+  margin-bottom M
+
+.potato-container
+  max-width 800px
+  margin    auto
+
+.photo-row
+  width  100%
+  height 121px
+  border 1px solid black
+  clear  both
+
+.photo-row + .photo-row
+  border-top 0
+  height     120px
+
+.photo-column
+  float           left
+  width           180px
+  height          119px
+  background-size cover !important
+  cursor          pointer
+
+.data-column 
+  float       left
+  margin-left M
+  padding-top M
+  width       598px
+
+  h3
+    margin-top 10px
+
+  .data
+    width 420px
+
+.date, .author, .view-on-flickr 
+  display inline-block
+
+.author
+  float left
+  margin-right 15px
+
+.view-on-flickr
+  float right
+
+@media (max-width: 800px)
+
+  .photo-row
+    border-left  0
+    border-right 0
+
+    .data-column
+      width 440px
+
+      h3
+        font-size 20px
+
+      .data
+        width 220px
+
+        .date
+          float none
+          margin-left 0
+
+        .view-on-flickr
+          float left
+
+@media (max-width: 640px)
+
+  .photo-row
+    border 0
+    height auto
+
+    & + &
+      height auto
+
+    .photo-column
+    .data-column
+    .author
+    .view-on-flickr
+      float none
+
+    .photo-column
+    .data-column
+    .data
+      margin auto
+
+    .photo-column
+      width  280px
+      height 187px
+
+    .data-column
+      width          auto
+      padding-top    0
+      padding-bottom M
+      text-align     center

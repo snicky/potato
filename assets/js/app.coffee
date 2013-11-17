@@ -1,0 +1,9 @@
+#= require lib/angular-1.2.1.min
+#= require lib/angular-route.min
+#= require lib/angular-sanitize.min
+#= require lib/truncate
+#= require main
+#= require controllers/photoListController
+#= require controllers/photoController
+#= require filters
+#= require photoData
